@@ -1,0 +1,14 @@
+from collections import Counter
+class Solution:
+    def firstUniqChar(self, s: str)->int:
+        a = Counter(s)
+        print(a)
+        for i in range(0,len(s)):
+            if(a[s[i]]==1):
+                return i
+        return -1
+        
+c = Solution()
+s = "loveleetcode"
+a = c.firstUniqChar(s)
+print(a)
